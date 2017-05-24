@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/03/19 23:03:11.000.934,=C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2017/03/19 23:03:12.000.018,=C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017/03/19 23:04:18.000.848,C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dzidz\Desktop\TEST1\test.dfm</Transaction>
+    <Transaction>2017/03/19 23:04:18.000.848,C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\dzidz\Desktop\TEST1\test.h</Transaction>
+    <Transaction>2017/03/19 23:04:18.000.848,C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\dzidz\Desktop\TEST1\test.cpp</Transaction>
+    <Transaction>2017/03/19 23:04:30.000.711,C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\dzidz\Desktop\TEST1\Project1PCH1.h</Transaction>
+    <Transaction>2017/03/19 23:04:33.000.704,C:\Users\dzidz\Documents\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\dzidz\Desktop\TEST1\Project1.cbproj</Transaction>
+    <Transaction>2017/05/23 22:24:01.000.896,=C:\Users\dzidz\Desktop\TEST1\Unit2.cpp</Transaction>
+    <Transaction>2017/05/23 22:25:08.000.900,C:\Users\dzidz\Desktop\TEST1\Unit2.dfm=C:\Users\dzidz\Desktop\TEST1\MoviesDetal.dfm</Transaction>
+    <Transaction>2017/05/23 22:25:08.000.900,C:\Users\dzidz\Desktop\TEST1\Unit2.h=C:\Users\dzidz\Desktop\TEST1\MoviesDetal.h</Transaction>
+    <Transaction>2017/05/23 22:25:08.000.900,C:\Users\dzidz\Desktop\TEST1\Unit2.cpp=C:\Users\dzidz\Desktop\TEST1\MoviesDetal.cpp</Transaction>
+    <Transaction>2017/05/24 20:52:26.000.595,C:\Users\dzidz\Desktop\TEST1\test.cpp=C:\Users\dzidz\Desktop\TEST1\main.cpp</Transaction>
+    <Transaction>2017/05/24 20:52:26.000.595,C:\Users\dzidz\Desktop\TEST1\test.dfm=C:\Users\dzidz\Desktop\TEST1\main.dfm</Transaction>
+    <Transaction>2017/05/24 20:52:26.000.595,C:\Users\dzidz\Desktop\TEST1\test.h=C:\Users\dzidz\Desktop\TEST1\main.h</Transaction>
+    <Transaction>2017/05/24 21:32:03.098,C:\Users\dzidz\Desktop\TEST1\KMSPCH1.h=C:\Users\dzidz\Desktop\TEST1\Project1PCH1.h</Transaction>
+    <Transaction>2017/05/24 21:32:03.126,C:\Users\dzidz\Desktop\TEST1\KMS.cbproj=C:\Users\dzidz\Desktop\TEST1\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
