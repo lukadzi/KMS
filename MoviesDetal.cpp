@@ -5,6 +5,7 @@
 
 #include "MoviesDetal.h"
 #include "main.h"
+#include "ActorsDetal.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "DBAccess"
@@ -18,6 +19,30 @@ __fastcall TMoviesDetalForm::TMoviesDetalForm(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+
+
+void __fastcall  TMoviesDetalForm::Active(int movie_id){
+
+   UniQuery1->ParamByName("movie_id")->AsInteger=movie_id;
+   UniQuery1->Open();
+}
+
+
+void __fastcall TMoviesDetalForm::FormClose(TObject *Sender, TCloseAction &Action)
+
+{
+  Action = caFree;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TMoviesDetalForm::DBGrid1DblClick(TObject *Sender)
+{
+   TForm1  *Form1 =  new TForm1(this);
+   Form1->ShowModal();
+}
+//---------------------------------------------------------------------------
+
 
 
 

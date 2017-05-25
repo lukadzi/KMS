@@ -5,6 +5,7 @@
 
 #include "main.h"
 #include "MoviesDetal.h"
+#include "ActorsDetal.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "DBAccess"
@@ -38,9 +39,13 @@ void __fastcall TMainForm::Button1Click(TObject *Sender)
 
 void __fastcall TMainForm::DBGrid1DblClick(TObject *Sender)
 {
-   MoviesDetalForm->ShowModal();
+   TMoviesDetalForm  *MoviesDetalForm1 =  new TMoviesDetalForm(this);
+   MoviesDetalForm1->Active(UniQueryMovies->FieldByName("id")->AsInteger);
+   MoviesDetalForm1->ShowModal();
 }
 //---------------------------------------------------------------------------
+
+
 
 
 

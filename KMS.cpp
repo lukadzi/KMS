@@ -4,17 +4,21 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
+#include <Vcl.Styles.hpp>
+#include <Vcl.Themes.hpp>
 USEFORM("main.cpp", MainForm);
 USEFORM("MoviesDetal.cpp", MoviesDetalForm);
+USEFORM("ActorsDetal.cpp", Form1);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
 	try
 	{
 		Application->Initialize();
-		Application->MainFormOnTaskBar = true;
+		Application->MainFormOnTaskBar = false;
+		TStyleManager::TrySetStyle("Emerald Light Slate");
 		Application->CreateForm(__classid(TMainForm), &MainForm);
-		Application->CreateForm(__classid(TMoviesDetalForm), &MoviesDetalForm);
+		Application->CreateForm(__classid(TForm1), &Form1);
 		Application->Run();
 	}
 	catch (Exception &exception)

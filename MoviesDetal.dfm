@@ -11,6 +11,7 @@ object MoviesDetalForm: TMoviesDetalForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -33,6 +34,37 @@ object MoviesDetalForm: TMoviesDetalForm
       ExplicitHeight = 64
     end
   end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 95
+    Width = 409
+    Height = 331
+    DataSource = DataSource2
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnDblClick = DBGrid1DblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'fullname'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'birthday'
+        Visible = True
+      end>
+  end
   object UniTable1: TUniTable
     TableName = 'movie_story'
     Connection = MainForm.UniConnection1
@@ -54,5 +86,47 @@ object MoviesDetalForm: TMoviesDetalForm
     DataSet = UniTable1
     Left = 192
     Top = 248
+  end
+  object UniQuery1: TUniQuery
+    Connection = MainForm.UniConnection1
+    SQL.Strings = (
+      'SELECT'
+      #9'actors.*'
+      'FROM'
+      #9'actors'
+      'WHERE'
+      #9'actors.id IN ('
+      #9#9'SELECT'
+      #9#9#9'movies_actors_linker.actors_id'
+      #9#9'FROM'
+      #9#9#9'movies_actors_linker'
+      #9#9'WHERE'
+      #9#9#9'movies_actors_linker.movies_id = :movie_id'
+      #9')')
+    Filtered = True
+    Left = 448
+    Top = 216
+    ParamData = <
+      item
+        DataType = ftInteger
+        Name = 'movie_id'
+        Value = 1
+      end>
+    object UniQuery1id: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'id'
+    end
+    object UniQuery1fullname: TWideStringField
+      FieldName = 'fullname'
+      Size = 255
+    end
+    object UniQuery1birthday: TDateField
+      FieldName = 'birthday'
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = UniQuery1
+    Left = 448
+    Top = 264
   end
 end

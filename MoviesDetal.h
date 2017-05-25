@@ -13,6 +13,8 @@
 #include <Data.DB.hpp>
 #include <Vcl.DBCtrls.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.DBGrids.hpp>
+#include <Vcl.Grids.hpp>
 //---------------------------------------------------------------------------
 class TMoviesDetalForm : public TForm
 {
@@ -21,9 +23,18 @@ __published:	// IDE-managed Components
 	TDBText *DBText1;
 	TUniTable *UniTable1;
 	TDataSource *DataSource1;
+	TUniQuery *UniQuery1;
+	TDBGrid *DBGrid1;
+	TDataSource *DataSource2;
+	TIntegerField *UniQuery1id;
+	TWideStringField *UniQuery1fullname;
+	TDateField *UniQuery1birthday;
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall DBGrid1DblClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TMoviesDetalForm(TComponent* Owner);
+	void __fastcall  Active(int movie_id);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TMoviesDetalForm *MoviesDetalForm;
