@@ -1,0 +1,52 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'ActorsDetalForm'
+  ClientHeight = 503
+  ClientWidth = 877
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object TDBText
+    Left = 0
+    Top = 0
+    Width = 877
+    Height = 57
+    Align = alTop
+  end
+  object UniTable1: TUniTable
+    TableName = 'actors_bio'
+    Connection = UniConnection1
+    FilterSQL = 'actors_id = :id'
+    Active = True
+    Left = 136
+    Top = 144
+    ParamData = <
+      item
+        DataType = ftUnknown
+        Name = 'id'
+        Value = nil
+      end>
+  end
+  object DataSource1: TDataSource
+    Left = 232
+    Top = 144
+  end
+  object UniConnection1: TUniConnection
+    ProviderName = 'mysql'
+    Port = 3306
+    Database = 'fguidege_lk'
+    Username = 'fguidege_lkusr'
+    Server = 'f-guide.ge'
+    Connected = True
+    Left = 56
+    Top = 152
+    EncryptedPassword = '85FF93FFAFFFC8FFBCFFACFF8CFFABFFADFF'
+  end
+end

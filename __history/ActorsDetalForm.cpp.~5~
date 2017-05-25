@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "ActorsDetalForm.h"
+#include "main.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "DBAccess"
+#pragma link "MemDS"
+#pragma link "Uni"
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall  TForm1::Active(int actors_id){
+
+   UniQuery1->ParamByName("actors_id")->AsInteger=actors_id;
+   UniQuery1->Open();
+}
+
+
+void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
+
+{
+  Action = caFree;
+}
+//---------------------------------------------------------------------------
+
+
+
+
